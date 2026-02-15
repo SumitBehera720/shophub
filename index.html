@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopHub - Your Premier Online Marketplace</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'><path fill='%23ff6b35' d='M160 112c0-35.3 28.7-64 64-64s64 28.7 64 64v48H160V112zm-48 48H48c-26.5 0-48 21.5-48 48V416c0 53 43 96 96 96H352c53 0 96-43 96-96V208c0-26.5-21.5-48-48-48H336V112C336 50.1 285.9 0 224 0S112 50.1 112 112v48zm24 96c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24zm200-24c0 13.3-10.7 24-24 24s-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24z'/></svg>">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Crimson+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="header-top">
+            <div class="container header-container">
+                <!-- Logo -->
+                <div class="logo">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="logo-text">Shop<strong>Hub</strong></span>
+                </div>
+
+                <!-- Delivery Location -->
+                <div class="delivery-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div class="location-text">
+                        <span class="location-label">Deliver to</span>
+                        <span class="location-value">New York 10001</span>
+                    </div>
+                </div>
+
+                <!-- Search Bar -->
+                <div class="search-bar">
+                    <select class="search-category">
+                        <option value="all">All</option>
+                        <option value="electronics">Electronics</option>
+                        <option value="fashion">Fashion</option>
+                        <option value="home">Home & Kitchen</option>
+                        <option value="books">Books</option>
+                        <option value="sports">Sports</option>
+                        <option value="toys">Toys & Games</option>
+                    </select>
+                    <input type="text" class="search-input" placeholder="Search for products, brands and more...">
+                    <button class="search-button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+
+                <!-- Right Navigation -->
+                <div class="header-nav">
+                    <div class="nav-item language-selector">
+                        <i class="fas fa-globe"></i>
+                        <select class="language-select">
+                            <option value="en">EN</option>
+                            <option value="es">ES</option>
+                            <option value="fr">FR</option>
+                        </select>
+                    </div>
+                    
+                    <a href="#" class="nav-item account">
+                        <i class="fas fa-user"></i>
+                        <div class="nav-text">
+                            <span class="nav-label">Hello, Sign in</span>
+                            <span class="nav-value">Account & Lists</span>
+                        </div>
+                    </a>
+
+                    <a href="#" class="nav-item orders">
+                        <i class="fas fa-box"></i>
+                        <div class="nav-text">
+                            <span class="nav-label">Returns</span>
+                            <span class="nav-value">& Orders</span>
+                        </div>
+                    </a>
+
+                    <a href="#" class="nav-item cart" id="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count" id="cart-count">0</span>
+                        <span class="nav-value">Cart</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Category Navigation Bar -->
+        <nav class="category-nav">
+            <div class="container">
+                <ul class="category-list">
+                    <li class="category-item menu-trigger">
+                        <i class="fas fa-bars"></i>
+                        <span>All Categories</span>
+                    </li>
+                    <li class="category-item">Today's Deals</li>
+                    <li class="category-item">Customer Service</li>
+                    <li class="category-item">Registry</li>
+                    <li class="category-item">Gift Cards</li>
+                    <li class="category-item">Sell</li>
+                    <li class="category-item featured">
+                        <i class="fas fa-star"></i>
+                        Premium Membership
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Banner Section -->
+    <section class="hero-banner">
+        <div class="banner-slider">
+            <div class="banner-slide active" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                <div class="banner-content">
+                    <h1 class="banner-title">Summer Electronics Sale</h1>
+                    <p class="banner-subtitle">Up to 60% off on laptops, headphones & more</p>
+                    <button class="banner-cta">Shop Now <i class="fas fa-arrow-right"></i></button>
+                </div>
+                <div class="banner-image">
+                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&h=400&fit=crop" alt="Electronics">
+                </div>
+            </div>
+            <div class="banner-slide" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                <div class="banner-content">
+                    <h1 class="banner-title">Fashion Forward</h1>
+                    <p class="banner-subtitle">New arrivals from top brands</p>
+                    <button class="banner-cta">Explore Collection <i class="fas fa-arrow-right"></i></button>
+                </div>
+                <div class="banner-image">
+                    <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=600&h=400&fit=crop" alt="Fashion">
+                </div>
+            </div>
+            <div class="banner-slide" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                <div class="banner-content">
+                    <h1 class="banner-title">Home Essentials</h1>
+                    <p class="banner-subtitle">Transform your space with style</p>
+                    <button class="banner-cta">Discover More <i class="fas fa-arrow-right"></i></button>
+                </div>
+                <div class="banner-image">
+                    <img src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?w=600&h=400&fit=crop" alt="Home">
+                </div>
+            </div>
+        </div>
+        <div class="banner-controls">
+            <button class="banner-prev"><i class="fas fa-chevron-left"></i></button>
+            <div class="banner-dots"></div>
+            <button class="banner-next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </section>
+
+    <!-- Category Cards -->
+    <section class="category-cards">
+        <div class="container">
+            <div class="cards-grid">
+                <div class="category-card">
+                    <h3 class="card-title">Electronics & Gadgets</h3>
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1498049794561-7780e7231661?w=400&h=300&fit=crop" alt="Electronics">
+                    </div>
+                    <a href="#" class="card-link">Shop now <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="category-card">
+                    <h3 class="card-title">Fashion & Apparel</h3>
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=400&h=300&fit=crop" alt="Fashion">
+                    </div>
+                    <a href="#" class="card-link">Shop now <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="category-card">
+                    <h3 class="card-title">Home & Kitchen</h3>
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=400&h=300&fit=crop" alt="Home">
+                    </div>
+                    <a href="#" class="card-link">Shop now <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="category-card">
+                    <h3 class="card-title">Books & Media</h3>
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?w=400&h=300&fit=crop" alt="Books">
+                    </div>
+                    <a href="#" class="card-link">Shop now <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Deals -->
+    <section class="deals-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Today's Best Deals</h2>
+                <a href="#" class="section-link">See all deals <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="deals-grid" id="deals-products">
+                <!-- Products will be dynamically inserted here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Trending Products</h2>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="electronics">Electronics</button>
+                    <button class="filter-btn" data-filter="fashion">Fashion</button>
+                    <button class="filter-btn" data-filter="home">Home</button>
+                    <button class="filter-btn" data-filter="books">Books</button>
+                </div>
+            </div>
+            <div class="products-grid" id="products-container">
+                <!-- Products will be dynamically inserted here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>Shopping Cart</h3>
+            <button class="cart-close" id="cart-close">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <div class="empty-cart">
+                <i class="fas fa-shopping-cart"></i>
+                <p>Your cart is empty</p>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-subtotal">
+                <span>Subtotal:</span>
+                <span class="cart-total" id="cart-total">$0.00</span>
+            </div>
+            <button class="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <!-- Cart Overlay -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-back-to-top">
+            <button id="back-to-top">Back to top</button>
+        </div>
+        
+        <div class="footer-main">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-column">
+                        <h4>Get to Know Us</h4>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Press Releases</a></li>
+                            <li><a href="#">ShopHub Science</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Make Money with Us</h4>
+                        <ul>
+                            <li><a href="#">Sell products on ShopHub</a></li>
+                            <li><a href="#">Become an Affiliate</a></li>
+                            <li><a href="#">Advertise Your Products</a></li>
+                            <li><a href="#">Self-Publish with Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>ShopHub Payment Products</h4>
+                        <ul>
+                            <li><a href="#">ShopHub Business Card</a></li>
+                            <li><a href="#">Shop with Points</a></li>
+                            <li><a href="#">Reload Your Balance</a></li>
+                            <li><a href="#">Currency Converter</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Let Us Help You</h4>
+                        <ul>
+                            <li><a href="#">Your Account</a></li>
+                            <li><a href="#">Your Orders</a></li>
+                            <li><a href="#">Shipping Rates & Policies</a></li>
+                            <li><a href="#">Returns & Replacements</a></li>
+                            <li><a href="#">Help</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <div class="footer-logo">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span>ShopHub</span>
+                    </div>
+                    <div class="footer-links">
+                        <a href="#">Conditions of Use</a>
+                        <a href="#">Privacy Notice</a>
+                        <a href="#">Your Ads Privacy Choices</a>
+                    </div>
+                    <p class="footer-copyright">© 2024 ShopHub, Inc. or its affiliates</p>
+                </div>
+                <div class="footer-developer">
+                    <p>Designed & Developed by <span class="developer-name">Sumit Behera</span></p>
+                    <div class="developer-social">
+                        <a href="https://github.com/SumitBehera720" title="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/sumit-behera-1869b6347/" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" title="Portfolio"><i class="fas fa-globe"></i></a>
+                        <a href="mailto:beherasumit772@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <i class="fas fa-check-circle"></i>
+        <span id="toast-message">Product added to cart!</span>
+    </div>
+
+    <!-- Quick View Modal -->
+    <div class="quick-view-modal" id="quick-view-modal">
+        <div class="quick-view-overlay" id="quick-view-overlay"></div>
+        <div class="quick-view-content">
+            <button class="quick-view-close" id="quick-view-close">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="quick-view-body">
+                <div class="quick-view-image">
+                    <img id="quick-view-img" src="" alt="Product">
+                    <button class="quick-view-wishlist">
+                        <i class="far fa-heart"></i>
+                    </button>
+                </div>
+                <div class="quick-view-details">
+                    <div class="quick-view-category" id="quick-view-category"></div>
+                    <h2 class="quick-view-title" id="quick-view-title"></h2>
+                    <div class="quick-view-rating" id="quick-view-rating"></div>
+                    <div class="quick-view-price">
+                        <span class="quick-view-current-price" id="quick-view-current-price"></span>
+                        <span class="quick-view-original-price" id="quick-view-original-price"></span>
+                        <span class="quick-view-discount" id="quick-view-discount"></span>
+                    </div>
+                    <div class="quick-view-description">
+                        <h3>Product Description</h3>
+                        <p id="quick-view-description">
+                            This premium product features high-quality materials and exceptional craftsmanship. 
+                            Perfect for everyday use with outstanding durability and style.
+                        </p>
+                    </div>
+                    <div class="quick-view-features">
+                        <h3>Key Features</h3>
+                        <ul id="quick-view-features-list">
+                            <li><i class="fas fa-check"></i> Premium quality materials</li>
+                            <li><i class="fas fa-check"></i> Durable construction</li>
+                            <li><i class="fas fa-check"></i> Modern design</li>
+                            <li><i class="fas fa-check"></i> Great value for money</li>
+                        </ul>
+                    </div>
+                    <div class="quick-view-actions">
+                        <button class="quick-view-add-cart" id="quick-view-add-cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            Add to Cart
+                        </button>
+                        <button class="quick-view-full-details">
+                            View Full Details
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
